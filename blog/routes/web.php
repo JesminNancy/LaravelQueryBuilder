@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\queryBuilderController;
 use App\Http\Controllers\AggregatesController;
+use App\Http\Controllers\MergeController;
 
 //Query Builder Retrieve Data
 
@@ -26,3 +27,7 @@ Route::get('/avg', [AggregatesController::class, 'avgRow']);
 Route::get('/unique', [queryBuilderController::class, 'selectUnique']);
 Route::get('/singleselect', [queryBuilderController::class, 'singleselectColumn']);
 Route::get('/multiselect', [queryBuilderController::class, 'multiselectColumn']);
+
+//Query Builder Merge
+
+Route::get('/merge', [MergeController::class, 'mergeData']);
