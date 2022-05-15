@@ -20,3 +20,9 @@ Route::get('/countrow', [AggregatesController::class, 'countRow']);
 Route::get('/max', [AggregatesController::class, 'maxRow']);
 Route::get('/min', [AggregatesController::class, 'minRow']);
 Route::get('/avg', [AggregatesController::class, 'avgRow']);
+
+//Query Builder Selects
+
+Route::get('/unique', [queryBuilderController::class, 'selectUnique']);
+Route::get('/singleselect', [queryBuilderController::class, 'singleselectColumn']);
+Route::get('/multiselect', [queryBuilderController::class, 'multiselectColumn']);

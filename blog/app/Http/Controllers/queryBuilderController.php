@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class queryBuilderController extends Controller
 {
+
+//Query Builder Retrieve Data
+
    function showAllRows(){
    
        $result= DB::table('students')->get();
@@ -32,5 +35,26 @@ class queryBuilderController extends Controller
     function specificData(){
         $result= DB::table('students')->where('id', '=', '1')->value('name');
         return json_encode($result);
+    }
+    
+//	Query Builder Selects
+
+    function selectUnique(){
+    
+        $result= DB::table('students')->distinct()->get();
+        return $result;
+    
+    }
+    function singleselectColumn(){
+    
+        $result= DB::table('students')->select('name')->get();
+        return $result;
+    
+    }
+    function multiselectColumn(){
+    
+        $result= DB::table('students')->select('name','roll')->get();
+        return $result;
+    
     }
 }
