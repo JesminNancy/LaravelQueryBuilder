@@ -13,3 +13,10 @@ Route::get('/onecolumn', [queryBuilderController::class, 'selectOneCol']);
 Route::get('/multicolumn', [queryBuilderController::class, 'selectmultiCol']);
 Route::get('/specificdata', [queryBuilderController::class, 'specificData']);
 
+
+//Query Builder Aggregates
+
+Route::get('/countrow', [AggregatesController::class, 'countRow']);
+Route::get('/max', [AggregatesController::class, 'maxRow']);
+Route::get('/min', [AggregatesController::class, 'minRow']);
+Route::get('/avg', [AggregatesController::class, 'avgRow']);
