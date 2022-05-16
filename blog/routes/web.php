@@ -5,6 +5,7 @@ use App\Http\Controllers\queryBuilderController;
 use App\Http\Controllers\AggregatesController;
 use App\Http\Controllers\MergeController;
 use App\Http\Controllers\JoinController;
+use App\Http\Controllers\InsertController;
 
 //Query Builder Retrieve Data
 
@@ -37,3 +38,8 @@ Route::get('/merge', [MergeController::class, 'mergeData']);
 
 Route::get('/leftjoin', [JoinController::class, 'leftJoinData']);
 Route::get('/rightjoin', [JoinController::class, 'rightJoinData']);
+
+//Query Builder Left-join Right-join
+
+Route::get('/insert', [InsertController::class, 'onInsert']);
+Route::get('/ignore', [InsertController::class, 'insertRows']);
