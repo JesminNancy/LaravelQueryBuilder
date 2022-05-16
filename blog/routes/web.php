@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\queryBuilderController;
 use App\Http\Controllers\AggregatesController;
 use App\Http\Controllers\MergeController;
+use App\Http\Controllers\JoinController;
 
 //Query Builder Retrieve Data
 
@@ -31,3 +32,8 @@ Route::get('/multiselect', [queryBuilderController::class, 'multiselectColumn'])
 //Query Builder Merge
 
 Route::get('/merge', [MergeController::class, 'mergeData']);
+
+//Query Builder Left-join Right-join
+
+Route::get('/leftjoin', [JoinController::class, 'leftJoinData']);
+Route::get('/rightjoin', [JoinController::class, 'rightJoinData']);
