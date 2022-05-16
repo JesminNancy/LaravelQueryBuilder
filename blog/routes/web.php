@@ -6,6 +6,7 @@ use App\Http\Controllers\AggregatesController;
 use App\Http\Controllers\MergeController;
 use App\Http\Controllers\JoinController;
 use App\Http\Controllers\InsertController;
+use App\Http\Controllers\deleteController;
 
 //Query Builder Retrieve Data
 
@@ -43,3 +44,6 @@ Route::get('/rightjoin', [JoinController::class, 'rightJoinData']);
 
 Route::get('/insert', [InsertController::class, 'onInsert']);
 Route::get('/ignore', [InsertController::class, 'insertRows']);
+
+//Query Builder Delete Data
+Route::get('/delete', [deleteController::class, 'onDelete']);
